@@ -71,7 +71,7 @@ const Home = ({ onError }: Props) => {
 
       <SettingItem label={t("Enable Proxy")}>
         <GuardState
-          value={enable_tun_mode ?? enable_system_proxy ?? false}
+          value={enable_tun_mode || enable_system_proxy}
           valueProps="checked"
           onCatch={onError}
           onFormat={onSwitchFormat}

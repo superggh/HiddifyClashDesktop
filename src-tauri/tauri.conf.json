@@ -1,7 +1,7 @@
 {
   "package": {
     "productName": "HiddifyClashDesktop",
-    "version": "13.1.4"
+    "version": "13.1.5"
   },
   "build": {
     "distDir": "../dist",

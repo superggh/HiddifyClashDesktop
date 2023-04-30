@@ -1,6 +1,6 @@
 {
   "name": "HiddifyClashDesktop",
-  "version": "13.1.4",
+  "version": "13.1.5",
   "license": "GPL-3.0",
   "scripts": {
     "dev": "tauri dev",

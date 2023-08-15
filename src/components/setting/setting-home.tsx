@@ -31,7 +31,7 @@ interface Props {
   onError?: (err: Error) => void;
 }
 
-const isWIN = getSystem() === "windows";
+const isWIN = getSystem() === "windows"; 
 
 const Home = ({ onError }: Props) => {
   const { t } = useTranslation();
@@ -103,7 +103,7 @@ const Home = ({ onError }: Props) => {
           onGuard={(e) => patchVerge({ language: e })}
         >
           <Select size="small" sx={{ width: 100, "> div": { py: "7.5px" } }}>
-            <MenuItem value="fa">فارسی</MenuItem>
+            {/* <MenuItem value="fa">فارسی</MenuItem> */}
             <MenuItem value="en">English</MenuItem>
             <MenuItem value="zh">中文</MenuItem>
           </Select>
@@ -143,7 +143,7 @@ const Home = ({ onError }: Props) => {
         })}
       >
 
-        <Typography sx={{ fontSize: "1.25em" }}>{t("Hiddify, For a free internet.")}</Typography>
+        {/* <Typography sx={{ fontSize: "1.25em" }}>{t("Hiddify, For a free internet.")}</Typography> */}
         
       </Box>
       

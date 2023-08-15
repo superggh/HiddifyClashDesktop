@@ -133,7 +133,7 @@ const SettingVerge = ({ onError }: Props) => {
           <ArrowForward />
         </IconButton>
       </SettingItem>
-
+{/* 
       <SettingItem label={t("Runtime Config")}>
         <IconButton
           color="inherit"
@@ -143,7 +143,7 @@ const SettingVerge = ({ onError }: Props) => {
         >
           <ArrowForward />
         </IconButton>
-      </SettingItem>
+      </SettingItem> */}
 
       <SettingItem label={t("Open App Dir")}>
         <IconButton
@@ -166,7 +166,7 @@ const SettingVerge = ({ onError }: Props) => {
           <ArrowForward />
         </IconButton>
       </SettingItem>
-
+{/* 
       <SettingItem label={t("Open Logs Dir")}>
         <IconButton
           color="inherit"
@@ -176,7 +176,7 @@ const SettingVerge = ({ onError }: Props) => {
         >
           <ArrowForward />
         </IconButton>
-      </SettingItem>
+      </SettingItem> */}
 
       <SettingItem label={t("Verge Version")}>
         <Typography sx={{ py: "7px", pr: 1 }}>v{version}</Typography>

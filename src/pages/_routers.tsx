@@ -8,7 +8,7 @@ import RulesPage from "./rules";
 
 export const routers = [
   {
-    label: "Label-Home",
+    label: "Label-Home", 
     link: "/",
     ele: HomePage,
   },

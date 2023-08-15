@@ -122,7 +122,7 @@ const SettingClash = ({ onError }: Props) => {
           <ArrowForward />
         </IconButton>
       </SettingItem>
-
+{/* 
       <SettingItem label={t("Web UI")}>
         <IconButton
           color="inherit"
@@ -132,7 +132,7 @@ const SettingClash = ({ onError }: Props) => {
         >
           <ArrowForward />
         </IconButton>
-      </SettingItem>
+      </SettingItem> */}
 
       <SettingItem label={t("Clash Field")}>
         <IconButton

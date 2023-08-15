@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import { useRef } from "react";
+import { useRef , useEffect} from "react";
 import { useTranslation } from "react-i18next";
 import { BaseEmpty, BasePage } from "@/components/base";
 import { version } from "@root/package.json";
@@ -27,6 +27,10 @@ import { ServiceViewer } from "./mods/service-viewer";
 import { SysproxyViewer } from "./mods/sysproxy-viewer";
 import getSystem from "@/utils/get-system";
 
+import axios from 'axios';
+
+
+
 interface Props {
   onError?: (err: Error) => void;
 }
@@ -34,6 +38,18 @@ interface Props {
 const isWIN = getSystem() === "windows"; 
 
 const Home = ({ onError }: Props) => {
+  useEffect(() => {
+    console.log('componentDidMount')
+    axios.defaults.withCredentials = true;
+    axios({
+      method:'get',
+      url:'https://api.202395111.site/vpn/test',
+      params: {}
+    }).then(res=>{
+      console.log(res)
+    })
+  }, []);
+ 
   const { t } = useTranslation();
 
   const { verge, mutateVerge, patchVerge } = useVerge();
@@ -47,6 +63,9 @@ const Home = ({ onError }: Props) => {
       shouldRetryOnError: false,
       focusThrottleInterval: 36e5, // 1 hour
     }
+
+
+
   );
 
   const serviceRef = useRef<DialogRef>(null);
@@ -64,8 +83,10 @@ const Home = ({ onError }: Props) => {
   const onChangeData = (patch: Partial<IVergeConfig>) => {
     mutateVerge({ ...verge, ...patch }, false);
   };
+  
   const is_admin = false
   return (
+    
     <SettingList title={t("Quick Actions")}>
       
 

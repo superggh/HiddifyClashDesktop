@@ -68,7 +68,7 @@ pub fn create_window(app_handle: &AppHandle) {
         match builder
             .decorations(false)
             .transparent(true)
-            .inner_size(800.0, 636.0)
+            .inner_size(500.0, 900.0)
             .visible(false)
             .build()
         {

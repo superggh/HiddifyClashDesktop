@@ -1,6 +1,7 @@
 import LogsPage from "./logs";
 import ProxiesPage from "./proxies";
 import HomePage from "./home";
+import Ipage from "./iframe";
 import ProfilesPage from "./profiles";
 import SettingsPage from "./settings";
 import ConnectionsPage from "./connections";
@@ -12,6 +13,12 @@ export const routers = [
     link: "/",
     ele: HomePage,
   },
+  {
+    label: "test", 
+    link: "/test",
+    ele: Ipage,
+  },
+
   {
     label: "Label-Proxies",
     link: "/proxy",
